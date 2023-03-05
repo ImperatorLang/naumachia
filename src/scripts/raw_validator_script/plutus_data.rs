@@ -117,7 +117,7 @@ impl From<TxContext> for PlutusData {
                 .collect(),
         );
         // TODO this id should be computed!
-        let id = wrap_with_constr(0, PlutusData::BoundedBytes(Vec::new()));
+        let id = wrap_with_constr(0, PlutusData::BoundedBytes(vec![0, 0, 0]));
         let tx_info = PlutusData::Constr(Constr {
             constr: 0,
             fields: vec![
